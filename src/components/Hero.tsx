@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Clock3 } from 'lucide-react'
+import { Phone, MessageCircle, Clock3, Star } from 'lucide-react'
 import WaveDivider from './WaveDivider'
 import heroPhoto from '../assets/cleaning - hero.jpg'
 
@@ -20,9 +20,20 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-5 pb-20 sm:px-8 sm:pb-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200/25 bg-paper/5 px-3.5 py-1.5 text-xs font-medium tracking-wide text-cyan-200 sm:text-sm">
-            <Clock3 className="h-3.5 w-3.5" />
-            Dostępni 24 godziny na dobę · Rybnik i okolice
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200/25 bg-paper/5 px-3.5 py-1.5 text-xs font-medium tracking-wide text-cyan-200 sm:text-sm">
+              <Clock3 className="h-3.5 w-3.5" />
+              Dostępni 24 godziny na dobę · Rybnik i okolice
+            </div>
+
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-200/25 bg-paper/5 px-3.5 py-1.5 text-xs font-medium tracking-wide text-cyan-200 sm:text-sm">
+              <span className="flex items-center gap-0.5 text-mustard-400">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-3.5 w-3.5" fill="currentColor" strokeWidth={0} />
+                ))}
+              </span>
+              5.0 w Google
+            </div>
           </div>
 
           <h1 className="relative mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
