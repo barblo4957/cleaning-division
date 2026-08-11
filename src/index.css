@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --color-ink: #142023;
+  --color-paper: #faf8f3;
+  --color-teal-950: #0e2f33;
+  --color-teal-900: #123c41;
+  --color-teal-700: #1a7480;
+  --color-teal-600: #1f8f9c;
+  --color-cyan-400: #5cc9dc;
+  --color-cyan-200: #bdeaf1;
+  --color-mustard-500: #e2a331;
+  --color-mustard-400: #edb94f;
+  --color-lime-500: #c3d94a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes wipe-reveal {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.wipe-blade {
+  transform-origin: right center;
+  animation: wipe-reveal 1.1s 0.15s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-2.5%, 3%);
+  }
+}
+
+.drift-slow {
+  animation: drift 14s ease-in-out infinite;
+}
