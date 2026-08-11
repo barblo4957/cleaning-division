@@ -36,7 +36,11 @@ export default function Hero() {
             </div>
           </div>
 
-          <h1 className="relative mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
+          <p className="mt-6 font-display text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            Sprzątanie w Rybniku i okolicy
+          </p>
+
+          <h1 className="relative mt-2 max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
             <span className="relative inline-block overflow-hidden">
               <span
                 className="wipe-blade absolute inset-0 bg-gradient-to-r from-mustard-400 via-cyan-400 to-teal-700"

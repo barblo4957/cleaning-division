@@ -2,7 +2,16 @@ import { Camera } from 'lucide-react'
 import realizacja1 from '../assets/realizacja-1.jpg'
 import realizacja2 from '../assets/realizacja-2.jpg'
 
-const photos = [realizacja1, realizacja2]
+const photos = [
+  {
+    src: realizacja1,
+    alt: 'Oznakowany samochód serwisowy Cleaning Division na osiedlu w Rybniku',
+  },
+  {
+    src: realizacja2,
+    alt: 'Logo i dane kontaktowe Cleaning Division na samochodzie firmowym',
+  },
+]
 const placeholderCount = 4
 
 export default function Portfolio() {
@@ -17,14 +26,15 @@ export default function Portfolio() {
         </h2>
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {photos.map((src, i) => (
+          {photos.map(({ src, alt }, i) => (
             <div
               key={i}
               className="aspect-square overflow-hidden rounded-2xl border border-teal-950/8 bg-white shadow-sm"
             >
               <img
                 src={src}
-                alt="Ekipa Cleaning Division przy pracy"
+                alt={alt}
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
             </div>

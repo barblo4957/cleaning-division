@@ -19,6 +19,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="Cleaning Division"
+              loading="lazy"
               className="h-8 w-8 rounded-full object-cover"
             />
             <span className="font-display text-sm font-semibold text-teal-950">
@@ -57,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-          <p className="text-xs text-ink/50">
+          <p className="text-xs text-ink/70">
             <a
               href="https://maps.app.goo.gl/72j31APGPSZcnwff6"
               target="_blank"
@@ -69,7 +70,7 @@ export default function Footer() {
             · 505 794 661 · cleaning.division.info@gmail.com
           </p>
 
-          <p className="text-xs text-ink/40">© {year} Cleaning Division</p>
+          <p className="text-xs text-ink/70">© {year} Cleaning Division</p>
         </div>
       </div>
     </footer>
