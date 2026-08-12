@@ -66,7 +66,7 @@ export default function Header() {
 
       {menuOpen && (
         <nav className="border-t border-teal-950/10 bg-paper px-5 py-3 sm:px-8 lg:hidden">
-          <ul className="flex flex-col divide-y divide-teal-950/8 pl-[3.375rem] sm:pl-[3.625rem]">
+          <ul className="flex flex-col divide-y divide-teal-950/8">
             {navLinks.map(({ href, label }) => (
               <li key={href}>
                 <a
