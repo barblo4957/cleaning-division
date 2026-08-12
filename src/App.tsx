@@ -6,11 +6,10 @@ import WhyUs from './components/WhyUs'
 import Faq from './components/Faq'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import MobileCta from './components/MobileCta'
 
 function App() {
   return (
-    <div className="pb-16 sm:pb-0">
+    <div>
       <Header />
       <main>
         <Hero />
@@ -21,7 +20,6 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <MobileCta />
     </div>
   )
 }
